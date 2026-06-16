@@ -172,117 +172,7 @@
 const WP = "5493764860087";
 const wpIcon = `<svg style="width:14px;height:14px;fill:#fff;flex-shrink:0" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>`;
 
-const productos = [
-  // BUZOS
-  {img:"buzo adidas marron.jpg", nombre:"Buzo Adidas Marrón", cat:"buzos"},
-  {img:"Buzo CABJ.jpg", nombre:"Buzo Boca Juniors", cat:"boca buzos"},
-  {img:"buzo canguro adidas.jpg", nombre:"Buzo Canguro Adidas", cat:"buzos"},
-  {img:"buzo CARP.jpg", nombre:"Buzo River Plate", cat:"river buzos"},
-  {img:"buzo con capucha Boca Juniors.jpg", nombre:"Buzo con Capucha Boca Juniors", cat:"boca buzos"},
-  {img:"buzo con capucha CABJ.jpg", nombre:"Buzo con Capucha CABJ", cat:"boca buzos"},
-  {img:"buzo estilo pupero nike verde.jpg", nombre:"Buzo Pupero Nike Verde", cat:"buzos mujer"},
-  {img:"buzo estilo pupero nike.jpg", nombre:"Buzo Pupero Nike", cat:"buzos mujer"},
-  {img:"buzo hombre varios colores.jpg", nombre:"Buzo Hombre Varios Colores", cat:"buzos"},
-  {img:"buzo independiente negro.jpg", nombre:"Buzo Independiente Negro", cat:"buzos"},
-  {img:"buzo kanguro the North Face.jpg", nombre:"Buzo Canguro The North Face", cat:"buzos"},
-  {img:"buzo manga larga Boca Juniors.jpg", nombre:"Buzo Manga Larga Boca Juniors", cat:"boca buzos"},
-  {img:"buzo manga larga river plate.jpg", nombre:"Buzo Manga Larga River Plate", cat:"river buzos"},
-  {img:"buzo mujer nike.jpg", nombre:"Buzo Mujer Nike", cat:"buzos mujer"},
-  {img:"buzo negro barcelona.jpg", nombre:"Buzo Negro Barcelona", cat:"buzos internacional"},
-  {img:"buzo nike.jpg", nombre:"Buzo Nike", cat:"buzos"},
-  {img:"buzo rosa mujer.jpg", nombre:"Buzo Rosa Mujer", cat:"buzos mujer"},
-  {img:"buzos varios colores.jpg", nombre:"Buzos Varios Colores", cat:"buzos"},
-  // CALZAS
-  {img:"calza bordo mujer.jpg", nombre:"Calza Bordo Mujer", cat:"calzas mujer"},
-  {img:"calza mujer ALO.jpg", nombre:"Calza Mujer ALO", cat:"calzas mujer"},
-  {img:"calza mujer Alo rosa.jpg", nombre:"Calza Mujer ALO Rosa", cat:"calzas mujer"},
-  {img:"calza mujer estilo oxford.jpg", nombre:"Calza Mujer Estilo Oxford", cat:"calzas mujer"},
-  {img:"calza mujer negra adidas.jpg", nombre:"Calza Mujer Negra Adidas", cat:"calzas mujer"},
-  {img:"calza negra nike.jpg", nombre:"Calza Negra Nike", cat:"calzas mujer"},
-  // CAMISETAS
-  {img:"camiseta argentina mujer.jpg", nombre:"Camiseta Argentina Mujer", cat:"argentina mujer"},
-  {img:"camiseta boca junior manga larga numero 5 Paredes.jpg", nombre:"Camiseta Boca Paredes #5", cat:"boca"},
-  {img:"camiseta cristiano ronaldo.jpg", nombre:"Camiseta Cristiano Ronaldo", cat:"internacional"},
-  {img:"camiseta dibu martinez.jpg", nombre:"Camiseta Dibu Martínez #23", cat:"argentina"},
-  {img:"camiseta liverpool edicion limitada.jpg", nombre:"Camiseta Liverpool Ed. Limitada", cat:"internacional"},
-  {img:"camiseta manga larga Boca Juniors.jpg", nombre:"Camiseta Manga Larga Boca Juniors", cat:"boca"},
-  {img:"camiseta manga larga CABJ.jpg", nombre:"Camiseta Manga Larga CABJ", cat:"boca"},
-  {img:"camiseta manga larga Milan.jpg", nombre:"Camiseta Manga Larga AC Milan", cat:"internacional"},
-  {img:"camiseta manga larga meesi 19.jpg", nombre:"Camiseta Manga Larga Messi #19", cat:"argentina"},
-  {img:"camiseta retro river.jpg", nombre:"Camiseta Retro River Plate", cat:"river"},
-  {img:"camisetas de futbol.jpg", nombre:"Camisetas de Fútbol Varios", cat:"internacional"},
-  {img:"dibu martinez camiseta.jpg", nombre:"Camiseta Dibu Martínez", cat:"argentina"},
-  // CAMPERAS
-  {img:"CABJ campera.jpg", nombre:"Campera CABJ", cat:"boca"},
-  {img:"campera CABJ.jpg", nombre:"Campera Boca Juniors", cat:"boca"},
-  {img:"campera Hombre.jpg", nombre:"Campera Hombre", cat:"buzos"},
-  {img:"campera pantalon CARP.jpg", nombre:"Campera + Pantalón River Plate", cat:"river conjuntos"},
-  {img:"campera Racing.jpg", nombre:"Campera Racing Club", cat:"racing"},
-  {img:"camperas varios colores.jpg", nombre:"Camperas Varios Colores", cat:"buzos"},
-  {img:"camperon AFA.jpg", nombre:"Camperón AFA", cat:"argentina"},
-  {img:"camperones boca juniors.jpg", nombre:"Camperón Boca Juniors", cat:"boca"},
-  {img:"camseta retro CARP.jpg", nombre:"Camiseta Retro River Plate", cat:"river"},
-  // CONJUNTOS
-  {img:"carp conjunto.jpg", nombre:"Conjunto River Plate", cat:"river conjuntos"},
-  {img:"conjuno deportivo Alo mujer.jpg", nombre:"Conjunto Deportivo ALO Mujer", cat:"conjuntos mujer"},
-  {img:"conjuno deportivo rosado.jpg", nombre:"Conjunto Deportivo Rosado", cat:"conjuntos mujer"},
-  {img:"conjunto AFA pantalon Campera.jpg", nombre:"Conjunto AFA Pantalón + Campera", cat:"argentina conjuntos"},
-  {img:"conjunto adidas celeste.jpg", nombre:"Conjunto Adidas Celeste", cat:"conjuntos"},
-  {img:"conjunto afa azul celeste.jpg", nombre:"Conjunto AFA Azul/Celeste", cat:"argentina conjuntos"},
-  {img:"conjunto afa celeste.jpg", nombre:"Conjunto AFA Celeste", cat:"argentina conjuntos"},
-  {img:"conjunto afa chicos.jpg", nombre:"Conjunto AFA Niños", cat:"argentina conjuntos ninos"},
-  {img:"conjunto boca juniors chicos.jpg", nombre:"Conjunto Boca Juniors Niños", cat:"boca conjuntos ninos"},
-  {img:"conjunto celeste seleccion argentina.jpg", nombre:"Conjunto Celeste Selección Argentina", cat:"argentina conjuntos"},
-  {img:"conjunto deportivo manga larga Gris.jpg", nombre:"Conjunto Deportivo Manga Larga Gris", cat:"conjuntos"},
-  {img:"conjunto deportivo mujer negro.jpg", nombre:"Conjunto Deportivo Mujer Negro", cat:"conjuntos mujer"},
-  {img:"conjunto deportivo mujer rosa.jpg", nombre:"Conjunto Deportivo Mujer Rosa", cat:"conjuntos mujer"},
-  {img:"conjunto deportivo mujer zul.jpg", nombre:"Conjunto Deportivo Mujer Azul", cat:"conjuntos mujer"},
-  {img:"conjunto deportivo negro NIKE.jpg", nombre:"Conjunto Deportivo Negro Nike", cat:"conjuntos"},
-  {img:"conjunto deportivo nike color negro.jpg", nombre:"Conjunto Deportivo Nike Negro", cat:"conjuntos"},
-  {img:"conjunto deportivo nike.jpg", nombre:"Conjunto Deportivo Nike", cat:"conjuntos"},
-  {img:"conjunto deportivo nino river plate.jpg", nombre:"Conjunto Deportivo Niño River Plate", cat:"river conjuntos ninos"},
-  {img:"conjunto deportivo seleccion argentina.jpg", nombre:"Conjunto Deportivo Selección Argentina", cat:"argentina conjuntos"},
-  {img:"conjunto gris nike..jpg", nombre:"Conjunto Gris Nike", cat:"conjuntos"},
-  {img:"conjunto gris nike.jpg", nombre:"Conjunto Gris Nike II", cat:"conjuntos"},
-  {img:"conjunto inter miami.jpg", nombre:"Conjunto Inter Miami", cat:"conjuntos internacional"},
-  {img:"conjunto mujer rosadas.jpg", nombre:"Conjunto Mujer Rosado", cat:"conjuntos mujer"},
-  {img:"conjunto nike gris.jpg", nombre:"Conjunto Nike Gris", cat:"conjuntos"},
-  {img:"deportivo negro mujee.jpg", nombre:"Conjunto Deportivo Negro Mujer", cat:"conjuntos mujer"},
-  // ROPA DEPORTIVA MUJER
-  {img:"maga larga deportiva mujer.jpg", nombre:"Manga Larga Deportiva Mujer", cat:"mujer"},
-  {img:"maga larga messi 19.jpg", nombre:"Manga Larga Messi #19", cat:"argentina"},
-  {img:"manga larga deportiva mujer.jpg", nombre:"Manga Larga Deportiva Mujer II", cat:"mujer"},
-  // MEDIAS
-  {img:"medias afa.jpg", nombre:"Medias AFA", cat:"medias argentina"},
-  {img:"medias azules adidas.jpg", nombre:"Medias Azules Adidas", cat:"medias"},
-  {img:"medias blancas Vans.jpg", nombre:"Medias Blancas Vans", cat:"medias"},
-  {img:"medias blancas adidas.jpg", nombre:"Medias Blancas Adidas", cat:"medias"},
-  {img:"medias blanco y negro.jpg", nombre:"Medias Blanco y Negro", cat:"medias"},
-  {img:"medias largas blanca nike.jpg", nombre:"Medias Largas Blancas Nike", cat:"medias"},
-  {img:"medias motivo messi 10..jpg", nombre:"Medias Motivo Messi #10", cat:"medias argentina"},
-  {img:"medias motivo messi 10.jpg", nombre:"Medias Motivo Messi #10 II", cat:"medias argentina"},
-  {img:"medias motivo patitas.jpg", nombre:"Medias Motivo Patitas", cat:"medias"},
-  {img:"medias motivo unicornio.jpg", nombre:"Medias Motivo Unicornio", cat:"medias"},
-  {img:"medias motivos divertidos.jpg", nombre:"Medias Motivos Divertidos", cat:"medias"},
-  {img:"medias motivos flores.jpg", nombre:"Medias Motivos Flores", cat:"medias"},
-  {img:"medias motivos gatitos.jpg", nombre:"Medias Motivos Gatitos", cat:"medias"},
-  {img:"medias motivos varios.jpg", nombre:"Medias Motivos Varios", cat:"medias"},
-  {img:"medias negra.jpg", nombre:"Medias Negras", cat:"medias"},
-  {img:"medias negras adidas.jpg", nombre:"Medias Negras Adidas", cat:"medias"},
-  {img:"medias nike blanca celeste.jpg", nombre:"Medias Nike Blanca/Celeste", cat:"medias"},
-  {img:"medias nike blancas.jpg", nombre:"Medias Nike Blancas", cat:"medias"},
-  // TOPS
-  {img:"top deportivo mujer.jpg", nombre:"Top Deportivo Mujer", cat:"tops mujer"},
-  {img:"top gris nike.jpg", nombre:"Top Gris Nike", cat:"tops mujer"},
-  {img:"top nike mujer celeste.jpg", nombre:"Top Nike Mujer Celeste", cat:"tops mujer"},
-  {img:"top nike varios colores.jpg", nombre:"Top Nike Varios Colores", cat:"tops mujer"},
-  {img:"top print mujer.jpg", nombre:"Top Print Mujer", cat:"tops mujer"},
-  // NOVEDADES
-  {img:"IMG-20260613-WA0079(1).jpg", nombre:"Conjunto AFA Celeste", cat:"argentina conjuntos"},
-  {img:"IMG-20260613-WA0079.jpg", nombre:"Conjunto AFA", cat:"argentina conjuntos"},
-  {img:"IMG-20260613-WA0084(1).jpg", nombre:"Conjunto AFA Pantalón", cat:"argentina conjuntos"},
-  {img:"IMG-20260613-WA0085(1).jpg", nombre:"Campera AFA Verde", cat:"argentina"},
-];
+let todosProductos = [];
 
 function wpLink(nombre) {
   return `https://wa.me/${WP}?text=Hola!%20Me%20interesa%20${encodeURIComponent(nombre)}`;
@@ -309,11 +199,19 @@ function renderProductos(lista) {
 function filtrar(cat, btn) {
   document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-  const filtrados = cat === 'todos' ? productos : productos.filter(p => p.cat.includes(cat));
+  const filtrados = cat === 'todos' ? todosProductos : todosProductos.filter(p => p.cat.includes(cat));
   renderProductos(filtrados);
 }
 
-renderProductos(productos);
+fetch('productos.json')
+  .then(r => r.json())
+  .then(data => {
+    todosProductos = data;
+    renderProductos(data);
+  })
+  .catch(() => {
+    document.getElementById('contador').textContent = 'Error cargando productos';
+  });
 </script>
 </body>
 </html>
